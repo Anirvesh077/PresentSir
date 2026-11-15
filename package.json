@@ -1,0 +1,15 @@
+{
+  "name": "attendalert",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AttendAlert - attendance early-warning app for mentors (PresentSir hackathon)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "seed": "npm run seed --prefix server",
+    "dev": "concurrently -n api,web -c blue,green \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "test": "npm test --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
